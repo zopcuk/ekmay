@@ -24,18 +24,22 @@ class FullScreenApp(object):
 
 root = tk.Tk()
 root.title("EKMAY GUI")
-root.wm_attributes('-fullscreen','true')
-root.wm_attributes('-topmost','true')
+#root.wm_attributes('-fullscreen','true')
+root.wm_attributes('-topmost', 'true')
 color1 = '#f09609'
-#root.geometry("1024x600")
+root.geometry("1024x600")
 #root.minsize(750, 400)
 s = ttk.Style()
 s.configure('new.TFrame', background=color1)
 content = ttk.Frame(root, style='new.TFrame')
+
+background_image=tk.PhotoImage(file=r"arka plan-01.png")
+background_label = tk.Label(content, image=background_image)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
 '''////////////////////////COLUMN COLORS///////////////////////////'''
 '''column 0'''
 col0Color = '#00aba9'
-col0label0 = tk.Label(content, bg=col0Color)
+'''col0label0 = tk.Label(content, bg=col0Color)
 col0label0.grid(row=0, column=0, sticky='ewns', columnspan=1)
 col0label1 = tk.Label(content, bg=col0Color)
 col0label1.grid(row=1, column=0, sticky='ewns', columnspan=1) # sticky='ew' expands the label horizontally
@@ -44,10 +48,10 @@ col0label2.grid(row=2, column=0, sticky='ewns', columnspan=1)
 col0label3 = tk.Label(content, bg=col0Color)
 col0label3.grid(row=3, column=0, sticky='ewns', columnspan=1)
 col0label4 = tk.Label(content, bg=col0Color)
-col0label4.grid(row=4, column=0, sticky='ewns', columnspan=1)
+col0label4.grid(row=4, column=0, sticky='ewns', columnspan=1)'''
 '''column 1'''
 col1Color = '#ff0097'
-col1label0 = tk.Label(content, bg=col1Color)
+'''col1label0 = tk.Label(content, bg=col1Color)
 col1label0.grid(row=0, column=1, sticky='ewns', columnspan=1)
 col1label1 = tk.Label(content, bg=col1Color)
 col1label1.grid(row=1, column=1, sticky='ewns', columnspan=1) # sticky='ew' expands the label horizontally
@@ -56,10 +60,10 @@ col1label2.grid(row=2, column=1, sticky='ewns', columnspan=1)
 col1label3 = tk.Label(content, bg=col1Color)
 col1label3.grid(row=3, column=1, sticky='ewns', columnspan=1)
 col1label4 = tk.Label(content, bg=col1Color)
-col1label4.grid(row=4, column=1, sticky='ewns', columnspan=1)
+col1label4.grid(row=4, column=1, sticky='ewns', columnspan=1)'''
 '''column 2'''
 col2Color = '#a4c400'
-col2row0 = tk.Label(content, bg=col2Color)
+'''col2row0 = tk.Label(content, bg=col2Color)
 col2row0.grid(row=0, column=2, sticky='ewns', columnspan=1)
 col2row1 = tk.Label(content, bg=col2Color)
 col2row1.grid(row=1, column=2, sticky='ewns', columnspan=1)
@@ -68,10 +72,10 @@ col2row2.grid(row=2, column=2, sticky='ewns', columnspan=1)
 col2row3 = tk.Label(content, bg=col2Color)
 col2row3.grid(row=3, column=2, sticky='ewns', columnspan=1)
 col2row4 = tk.Label(content, bg=col2Color)
-col2row4.grid(row=4, column=2, sticky='ewns', columnspan=1)
+col2row4.grid(row=4, column=2, sticky='ewns', columnspan=1)'''
 '''column 3'''
 col3Color = '#a200ff'
-col3label0 = tk.Label(content, bg=col3Color)
+'''col3label0 = tk.Label(content, bg=col3Color)
 col3label0.grid(row=0, column=3, sticky='ewns', columnspan=1)
 col3label1 = tk.Label(content, bg=col3Color)
 col3label1.grid(row=1, column=3, sticky='ewns', columnspan=1) # sticky='ew' expands the label horizontally
@@ -80,10 +84,10 @@ col3label2.grid(row=2, column=3, sticky='ewns', columnspan=1)
 col3label3 = tk.Label(content, bg=col3Color)
 col3label3.grid(row=3, column=3, sticky='ewns', columnspan=1)
 col3label4 = tk.Label(content, bg=col3Color)
-col3label4.grid(row=4, column=3, sticky='ewns', columnspan=1)
+col3label4.grid(row=4, column=3, sticky='ewns', columnspan=1)'''
 '''column 4'''
 col4Color = '#1ba1e2'
-col4label0 = tk.Label(content, bg=col4Color)
+'''col4label0 = tk.Label(content, bg=col4Color)
 col4label0.grid(row=0, column=4, sticky='ewns', columnspan=1)
 col4label1 = tk.Label(content, bg=col4Color)
 col4label1.grid(row=1, column=4, sticky='ewns', columnspan=1) # sticky='ew' expands the label horizontally
@@ -92,7 +96,7 @@ col4label2.grid(row=2, column=4, sticky='ewns', columnspan=1)
 col4label3 = tk.Label(content, bg=col4Color)
 col4label3.grid(row=3, column=4, sticky='ewns', columnspan=1)
 col4label4 = tk.Label(content, bg=col4Color)
-col4label4.grid(row=4, column=4, sticky='ewns', columnspan=1)
+col4label4.grid(row=4, column=4, sticky='ewns', columnspan=1)'''
 '''////////////////////'''
 '''background_image=tk.PhotoImage(file=r"OLO2DM0.png")
 background_label = tk.Label(content, image=background_image)

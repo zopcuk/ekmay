@@ -6,29 +6,110 @@ from tkinter import *
 from tkinter.ttk import *
 import tkinter as tk
 from tkinter import messagebox
-'''
-class FullScreenApp(object):
-    def __init__(self, master, **kwargs):
-        self.master=master
-        pad=3
-        self._geom='200x200+0+0'
-        master.geometry("{0}x{1}+0+0".format(
-            master.winfo_screenwidth()-pad, master.winfo_screenheight()-pad))
-        master.bind('<Escape>',self.toggle_geom)
-    def toggle_geom(self,event):
-        geom=self.master.winfo_geometry()
-        print(geom,self._geom)
-        self.master.geometry(self._geom)
-        self._geom=geom
-'''
+'''/////////////////////////////functions//////////////////////////////'''
+def exit(event):
+    root.destroy()
 
+def homePos():
+    print("all positions going to zero")
+def resetButton():
+    winColor="brown"
+    bottomColor="yellow"
+    yesColor="green"
+    noColor="green"
+    win = tk.Toplevel(background=winColor)
+    win.wm_title("Window")
+
+    w = 475
+    h = 225
+    ws = root.winfo_screenwidth()
+    hs = root.winfo_screenheight()
+    x = (ws / 2) - (w / 2)
+    y = (hs / 2) - (h / 2)
+    win.geometry('%dx%d+%d+%d' % (w, h, x, y))
+    win.overrideredirect(True)
+    win.wm_attributes('-topmost', 'true')
+
+    s = ttk.Style()
+    s.configure('new.TFrame', background=winColor,highlightcolor="green",highlightthickness=3,bd=3)
+    winFrame = ttk.Frame(win, style='new.TFrame')
+
+    def yesButton():
+        homePos()
+        win.destroy()
+
+    headLabel = tk.Label(winFrame, text="Reset Positions", bg=winColor)
+    headLabel.config(font=("Courier", 14))
+    textLabel = tk.Label(winFrame, text="Are you sure?",bg=winColor)
+    textLabel.config(font=("Courier",11))
+
+    yesLabel = tk.Label(winFrame, bg=bottomColor)
+    yesLabel.grid(row=2, column=0, sticky='ewns', columnspan=1)
+    b_yes = tk.Button(winFrame, image=check, bg=bottomColor, border=0, highlightthickness=0, activebackground=bottomColor, command=yesButton)
+
+    noLabel = tk.Label(winFrame, bg=bottomColor)
+    noLabel.grid(row=2, column=4, sticky='ewns', columnspan=1)
+    b_no = tk.Button(winFrame, image = delete, bg=bottomColor, border=0, highlightthickness=0, activebackground="green", command=win.destroy)
+
+    area1 = tk.Label(winFrame, bg=bottomColor)
+    area1.grid(row=2, column=1, sticky='ewns', columnspan=1)
+    area2 = tk.Label(winFrame, bg=bottomColor)
+    area2.grid(row=2, column=2, sticky='ewns', columnspan=1)
+    area3 = tk.Label(winFrame, bg=bottomColor)
+    area3.grid(row=2, column=3, sticky='ewns', columnspan=1)
+    '''//////////////////////////yes button events///////////////////////////////////'''
+
+    def yesClick(event):
+        yesLabel.configure(bg=yesColor)
+        b_yes.configure(bg=yesColor, activebackground=yesColor)
+        print("yesButtonClick")
+
+    def yesRelease(event):
+        yesLabel.configure(bg=bottomColor)
+        b_yes.configure(bg=bottomColor, activebackground=bottomColor)
+        print("yesButtonRelease")
+        yesButton()
+
+    b_yes.bind("<ButtonPress>", yesClick)
+    b_yes.bind("<ButtonRelease>", yesRelease)
+    '''////////////////////////////no button events/////////////////////////////////'''
+    def noClick(event):
+        noLabel.configure(bg=noColor)
+        b_no.configure(bg=noColor, activebackground=noColor)
+        print("yesButtonClick")
+
+    def noRelease(event):
+        noLabel.configure(bg=bottomColor)
+        b_no.configure(bg=bottomColor, activebackground=bottomColor)
+        print("yesButtonRelease")
+        yesButton()
+
+    b_no.bind("<ButtonPress>", noClick)
+    b_no.bind("<ButtonRelease>", noRelease)
+    '''////////////////////////////////////////////////////////////////'''
+
+    winFrame.grid(column=0, row=0, sticky=(N, S, E, W))
+    headLabel.grid(row=0, column=2)
+    textLabel.grid(row=1, column=2)
+    b_yes.grid(row=2, column=0)
+    b_no.grid(row=2, column=4)
+
+    win.columnconfigure(0, weight=1)
+    win.rowconfigure(0, weight=1)
+    winFrame.columnconfigure(0, weight=2)
+    winFrame.columnconfigure(1, weight=0)
+    winFrame.columnconfigure(2, weight=2)
+    winFrame.columnconfigure(3, weight=0)
+    winFrame.columnconfigure(4, weight=2)
+    winFrame.rowconfigure(0, weight=2)
+    winFrame.rowconfigure(1, weight=2)
+    winFrame.rowconfigure(2, weight=2)
+'''///////////////////////////tkinter config//////////////////////////////'''
 root = tk.Tk()
 root.title("EKMAY GUI")
 root.wm_attributes('-fullscreen','true')
 root.wm_attributes('-topmost','true')
 color1 = '#f09609'
-#root.geometry("1024x600")
-#root.minsize(750, 400)
 s = ttk.Style()
 s.configure('new.TFrame', background=color1)
 content = ttk.Frame(root, style='new.TFrame')
@@ -93,34 +174,42 @@ col4label3 = tk.Label(content, bg=col4Color)
 col4label3.grid(row=3, column=4, sticky='ewns', columnspan=1)
 col4label4 = tk.Label(content, bg=col4Color)
 col4label4.grid(row=4, column=4, sticky='ewns', columnspan=1)
-'''////////////////////'''
-'''background_image=tk.PhotoImage(file=r"OLO2DM0.png")
-background_label = tk.Label(content, image=background_image)
-background_label.place(x=0, y=0, relwidth=1, relheight=1)'''
 '''///////////////////// ICONS //////////////////////'''
-pwm_add = tk.PhotoImage(file=r"add.png")
+pwm_add = tk.PhotoImage(file=r"700256.png")
 pwm_add = pwm_add.subsample(5, 5)
 
-pwm_minus = tk.PhotoImage(file=r"minus.png")
+pwm_minus = tk.PhotoImage(file=r"700294.png")
 pwm_minus = pwm_minus.subsample(5, 5)
 
-arrow_up = tk.PhotoImage(file=r"up-arrow-in-square.png")
+arrow_up = tk.PhotoImage(file=r"up.png")
 arrow_up = arrow_up.subsample(5, 5)
 
-arrow_down = tk.PhotoImage(file=r"down-arrow-square.png")
+arrow_down = tk.PhotoImage(file=r"down.png")
 arrow_down = arrow_down.subsample(5, 5)
 
 motor1_icon = tk.PhotoImage(file=r"icons8-airbag-80.png")
 motor1_icon = motor1_icon.subsample(1, 1)
-reset_icon = tk.PhotoImage(file=r"go-back-button.png")
+
+reset_icon = tk.PhotoImage(file=r"reload-arrow.png")
 reset_icon = reset_icon.subsample(5, 5)
-lock_icon = tk.PhotoImage(file=r"locked-padlock.png")
+
+check = tk.PhotoImage(file=r"check-button.png")
+check = check.subsample(1, 1)
+
+delete = tk.PhotoImage(file=r"delete-button.png")
+delete = delete.subsample(1, 1)
+
+lock_icon = tk.PhotoImage(file=r"lock-icon.png")
 lock_icon = lock_icon.subsample(5, 5)
+
+ekmay_logo = tk.PhotoImage(file=r"ekmay-logo.png")
+ekmay_logo = ekmay_logo.subsample(3, 3)
+
 iconlbl1 = ttk.Label(content, image=motor1_icon, background=col0Color)
 iconlbl2 = ttk.Label(content, image=motor1_icon, background=col1Color)
 iconlbl3 = ttk.Label(content, image=motor1_icon, background=col3Color)
 iconlbl4 = ttk.Label(content, image=motor1_icon, background=col4Color)
-
+iconlbl5 = tk.Label(content, image=ekmay_logo, background=col2Color,height=100)
 '''/////////////////// MOTOR 1 ////////////////////'''
 motor1_ileri = tk.Button(content, image = arrow_up, bg=col0Color, border=0, highlightthickness=0, activebackground=col0Color)
 motor1_geri = tk.Button(content, image = arrow_down, bg=col0Color, border=0, highlightthickness=0, activebackground=col0Color)
@@ -272,12 +361,8 @@ def homeButtonRelease(event):
     col2row2.configure(bg=col2Color)
     home_button.configure(bg=col2Color, activebackground=col2Color)
     print("homeButtonRelease")
-    print("message box active")
-    answer = messagebox.askquestion("Confirm","Are you sure?")
-    if answer == "yes":
-        print("yes home position")
-    else:
-        print("no")
+    resetButton()
+
 home_button.bind("<ButtonPress>", homeButtonClick)
 home_button.bind("<ButtonRelease>", homeButtonRelease)
 '''////////////////////////////////LOCK BUTTON//////////////////////////////'''
@@ -307,6 +392,7 @@ iconlbl1.grid(column=0, row=2)
 iconlbl2.grid(column=1, row=2)
 iconlbl3.grid(column=3, row=2)
 iconlbl4.grid(column=4, row=2)
+iconlbl5.grid(column=2, row=1,sticky=(E, W))
 home_button.grid(column=2, row=2)
 lock_button.grid(column=2, row=3)
 
@@ -323,10 +409,7 @@ content.rowconfigure(2, weight=2)
 content.rowconfigure(3, weight=2)
 content.rowconfigure(4, weight=2)
 
-#app=FullScreenApp(root)
 #root.config(cursor='none')
-
-
-
+root.bind("<Escape>", exit)
 
 root.mainloop()

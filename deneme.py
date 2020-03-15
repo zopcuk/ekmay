@@ -1,63 +1,126 @@
 import tkinter as tk
+from tkinter import ttk
+from tkinter import *
+from tkinter.messagebox import showinfo
+def homePos():
+    print("all positions going to zero")
+def resetButton():
+    winColor="brown"
+    bottomColor="yellow"
+    yesColor="green"
+    noColor="green"
+    win = tk.Toplevel(background=winColor)
+    win.wm_title("Window")
 
-# --- functions ---
+    w = 375
+    h = 225
+    ws = root.winfo_screenwidth()
+    hs = root.winfo_screenheight()
+    x = (ws / 2) - (w / 2)
+    y = (hs / 2) - (h / 2)
+    win.geometry('%dx%d+%d+%d' % (w, h, x, y))
+    win.overrideredirect(True)
+    win.wm_attributes('-topmost', 'true')
 
-def code(value):
+    s = ttk.Style()
+    s.configure('new.TFrame', background=winColor,highlightcolor="green",highlightthickness=3,bd=3)
+    winFrame = ttk.Frame(win, style='new.TFrame')
 
-    # inform function to use external/global variable
-    global pin
+    def yesButton():
+        homePos()
+        win.destroy()
 
-    if value == '*':
-        # remove last number from `pin`
-        pin = pin[:-1]
-        # remove all from `entry` and put new `pin`
-        e.delete('0', 'end')
-        e.insert('end', pin)
+    headLabel = tk.Label(winFrame, text="Reset Positions", bg=winColor)
+    headLabel.config(font=("Courier", 12))
+    textLabel = tk.Label(winFrame, text="Are you sure?",bg=winColor)
+    textLabel.config(font=("Courier", 9))
 
-    elif value == '#':
-        # check pin
+    yesLabel = tk.Label(winFrame, bg=bottomColor)
+    yesLabel.grid(row=2, column=0, sticky='ewns', columnspan=1)
+    b_yes = tk.Button(winFrame, image=check, bg=bottomColor, border=0, highlightthickness=0, activebackground=bottomColor, command=yesButton)
 
-        if pin == "3529":
-            print("PIN OK")
-        else:
-            print("PIN ERROR!", pin)
-            # clear `pin`
-            pin = ''
-            # clear `entry`
-            e.delete('0', 'end')
+    noLabel = tk.Label(winFrame, bg=bottomColor)
+    noLabel.grid(row=2, column=4, sticky='ewns', columnspan=1)
+    b_no = tk.Button(winFrame, image = delete, bg=bottomColor, border=0, highlightthickness=0, activebackground="green", command=win.destroy)
 
-    else:
-        # add number to pin
-        pin += value
-        # add number to `entry`
-        e.insert('end', value)
+    area1 = tk.Label(winFrame, bg=bottomColor)
+    area1.grid(row=2, column=1, sticky='ewns', columnspan=1)
+    area2 = tk.Label(winFrame, bg=bottomColor)
+    area2.grid(row=2, column=2, sticky='ewns', columnspan=1)
+    area3 = tk.Label(winFrame, bg=bottomColor)
+    area3.grid(row=2, column=3, sticky='ewns', columnspan=1)
+    '''//////////////////////////yes button events///////////////////////////////////'''
 
-    print("Current:", pin)
+    def yesClick(event):
+        yesLabel.configure(bg=yesColor)
+        b_yes.configure(bg=yesColor, activebackground=yesColor)
+        print("yesButtonClick")
 
-# --- main ---
+    def yesRelease(event):
+        yesLabel.configure(bg=bottomColor)
+        b_yes.configure(bg=bottomColor, activebackground=bottomColor)
+        print("yesButtonRelease")
+        yesButton()
 
-keys = [
-    ['1', '2', '3'],
-    ['4', '5', '6'],
-    ['7', '8', '9'],
-    ['*', '9', '#'],
-]
+    b_yes.bind("<ButtonPress>", yesClick)
+    b_yes.bind("<ButtonRelease>", yesRelease)
+    '''////////////////////////////no button events/////////////////////////////////'''
+    def noClick(event):
+        noLabel.configure(bg=noColor)
+        b_no.configure(bg=noColor, activebackground=noColor)
+        print("yesButtonClick")
 
-# create global variable for pin
-pin = '' # empty string
+    def noRelease(event):
+        noLabel.configure(bg=bottomColor)
+        b_no.configure(bg=bottomColor, activebackground=bottomColor)
+        print("yesButtonRelease")
+        yesButton()
+
+    b_no.bind("<ButtonPress>", noClick)
+    b_no.bind("<ButtonRelease>", noRelease)
+    '''////////////////////////////////////////////////////////////////'''
+
+    winFrame.grid(column=0, row=0, sticky=(N, S, E, W))
+    headLabel.grid(row=0, column=2)
+    textLabel.grid(row=1, column=2)
+    b_yes.grid(row=2, column=0)
+    b_no.grid(row=2, column=4)
+
+    win.columnconfigure(0, weight=1)
+    win.rowconfigure(0, weight=1)
+    winFrame.columnconfigure(0, weight=4)
+    winFrame.columnconfigure(1, weight=1)
+    winFrame.columnconfigure(2, weight=1)
+    winFrame.columnconfigure(3, weight=1)
+    winFrame.columnconfigure(4, weight=4)
+    winFrame.rowconfigure(0, weight=2)
+    winFrame.rowconfigure(1, weight=2)
+    winFrame.rowconfigure(2, weight=2)
+
+def popup_showinfo():
+    showinfo("Window", "Hello World!")
+
+class Application(ttk.Frame):
+
+    def __init__(self, master):
+        ttk.Frame.__init__(self, master)
+        self.pack()
+
+        self.button_bonus = ttk.Button(self, text="Bonuses", command=resetButton)
+        self.button_bonus.pack()
+
+        self.button_showinfo = ttk.Button(self, text="Show Info", command=popup_showinfo)
+        self.button_showinfo.pack()
 
 root = tk.Tk()
+root.wm_attributes('-topmost','true')
+root.wm_attributes('-fullscreen','true')
 
-# place to display pin
-e = tk.Entry(root)
-e.grid(row=0, column=0, columnspan=3, ipady=5)
+check = tk.PhotoImage(file=r"check-button.png")
+check = check.subsample(1, 1)
 
-# create buttons using `keys`
-for y, row in enumerate(keys, 1):
-    for x, key in enumerate(row):
-        # `lambda` inside `for` has to use `val=key:code(val)`
-        # instead of direct `code(key)`
-        b = tk.Button(root, text=key, command=lambda val=key:code(val))
-        b.grid(row=y, column=x, ipadx=10, ipady=10)
+delete = tk.PhotoImage(file=r"delete-button.png")
+delete = delete.subsample(1, 1)
+app = Application(root)
 
 root.mainloop()

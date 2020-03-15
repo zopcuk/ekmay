@@ -12,12 +12,12 @@ root.geometry("1024x600")
 root.minsize(750, 400)
 s = ttk.Style()
 s.configure('new.TFrame', background=color1)
-content = ttk.Frame(root, padding=(3, 3, 3, 3), style='new.TFrame')
+content = ttk.Frame(root, style='new.TFrame')
 root.configure(bg=color1)
 
-'''background_image=tk.PhotoImage(file=r"OLO2DM0.png")
+background_image=tk.PhotoImage(file=r"arka plan-01.png")
 background_label = tk.Label(content, image=background_image)
-background_label.place(x=0, y=0, relwidth=1, relheight=1)'''
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
 '''///////////////////// ICONS //////////////////////'''
 pwm_add = tk.PhotoImage(file=r"add.png")
 pwm_add = pwm_add.subsample(5, 5)

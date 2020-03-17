@@ -13,8 +13,8 @@ def exit(event):
 def homePos():
     print("all positions going to zero")
 def resetButton():
-    winColor="brown"
-    bottomColor="yellow"
+    winColor="white"
+    bottomColor="white"
     yesColor="green"
     noColor="green"
     win = tk.Toplevel(background=winColor)

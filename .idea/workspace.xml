@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d85b39-3557-4ffb-b441-bbb701a511f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ekran6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ekran7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deneme3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deneme.py" beforeDir="false" afterPath="$PROJECT_DIR$/deneme.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran3.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran5.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deneme2.py" beforeDir="false" afterPath="$PROJECT_DIR$/deneme2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran6.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwm_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwm_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.ekran6">
+  <component name="RunManager" selected="Python.deneme2">
     <configuration name="deneme" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,7 +60,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ekran3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="deneme2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,7 +72,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deneme2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +81,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ekran4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="deneme3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deneme3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.deneme2" />
+        <item itemvalue="Python.deneme3" />
         <item itemvalue="Python.ekran6" />
         <item itemvalue="Python.deneme" />
         <item itemvalue="Python.ekran7" />
-        <item itemvalue="Python.ekran3" />
-        <item itemvalue="Python.ekran4" />
       </list>
     </recent_temporary>
   </component>
@@ -208,38 +205,38 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="406" y="23" key="#ekran5/0.0.1366.768@0.0.1366.768" timestamp="1583496962307" />
-    <state width="1345" height="143" key="GridCell.Tab.0.bottom" timestamp="1584209087612">
+    <state width="1345" height="143" key="GridCell.Tab.0.bottom" timestamp="1584291178166">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584209087612" />
-    <state width="1345" height="143" key="GridCell.Tab.0.center" timestamp="1584209087612">
+    <state width="1345" height="143" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
+    <state width="1345" height="143" key="GridCell.Tab.0.center" timestamp="1584291178166">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584209087612" />
-    <state width="1345" height="143" key="GridCell.Tab.0.left" timestamp="1584209087611">
+    <state width="1345" height="143" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
+    <state width="1345" height="143" key="GridCell.Tab.0.left" timestamp="1584291178166">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584209087611" />
-    <state width="1345" height="143" key="GridCell.Tab.0.right" timestamp="1584209087612">
+    <state width="1345" height="143" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
+    <state width="1345" height="143" key="GridCell.Tab.0.right" timestamp="1584291178166">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584209087612" />
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1583525528269">
+    <state width="1345" height="143" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
+    <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1584290018143">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583525528269" />
-    <state width="1345" height="238" key="GridCell.Tab.1.center" timestamp="1583525528269">
+    <state width="1345" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
+    <state width="1345" height="238" key="GridCell.Tab.1.center" timestamp="1584290018143">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1583525528269" />
-    <state width="1345" height="238" key="GridCell.Tab.1.left" timestamp="1583525528269">
+    <state width="1345" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
+    <state width="1345" height="238" key="GridCell.Tab.1.left" timestamp="1584290018143">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1583525528269" />
-    <state width="1345" height="238" key="GridCell.Tab.1.right" timestamp="1583525528269">
+    <state width="1345" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
+    <state width="1345" height="238" key="GridCell.Tab.1.right" timestamp="1584290018143">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1583525528269" />
+    <state width="1345" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
     <state x="184" y="27" key="SettingsEditor" timestamp="1583396940739">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

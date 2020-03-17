@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 # Setup GPIO Pins
 GPIO.setup(12, GPIO.OUT)
 GPIO.setup(32, GPIO.OUT)

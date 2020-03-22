@@ -1,5 +1,5 @@
 from tkinter import *
-
+import tkinter as tk
 '''def show():
     p = password.get() #get password from entry
     print(p)
@@ -15,14 +15,13 @@ app.mainloop()'''
 from tkinter import *
 from tkinter import ttk
 def set_text(text):
-
     e.insert(0,text)
     return
 
 win = Tk()
 parola ="1212"
 password = StringVar() #Password variable
-e = ttk.Entry(win,textvariable=password, show='',width=10)
+e = tk.Entry(win,textvariable=password, show='',width=10)
 e.pack()
 
 b1 = Button(win,text="animal",command=lambda:e.insert(END,"1"))
@@ -46,6 +45,6 @@ def passOk():
         e.delete(0,END)
 b4 = Button(win,text="ok",command=passOk)
 b4.pack()
-a = ["1","2"]
+
 
 win.mainloop()

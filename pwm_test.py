@@ -17,6 +17,7 @@ pwm12.start(0)
 pwm32.start(0)
 pwm33.start(0)
 pwm35.start(0)
+a = 0
 try:
 	while True:
 		for dutyCycle in range (0, 100, 5):

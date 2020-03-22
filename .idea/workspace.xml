@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d85b39-3557-4ffb-b441-bbb701a511f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deneme3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ekran8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deneme2.py" beforeDir="false" afterPath="$PROJECT_DIR$/deneme2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran6.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deneme3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran7.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwm_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pwm_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,28 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.deneme2">
-    <configuration name="deneme" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="eymak" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deneme.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.lockPage">
     <configuration name="deneme2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +103,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ekran6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="homePage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,7 +115,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran6.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homePage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ekran7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lockPage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,7 +136,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran7.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lockPage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="eymak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.deneme2" />
+        <item itemvalue="Python.lockPage" />
+        <item itemvalue="Python.homePage" />
         <item itemvalue="Python.deneme3" />
-        <item itemvalue="Python.ekran6" />
-        <item itemvalue="Python.deneme" />
-        <item itemvalue="Python.ekran7" />
+        <item itemvalue="Python.deneme2" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +190,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="402" y="11" key="#deneme3" timestamp="1584887162739">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="402" y="11" key="#deneme3/0.0.1366.768@0.0.1366.768" timestamp="1584887162739" />
     <state x="402" y="15" key="#ekran1" timestamp="1583424629429">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -205,22 +210,26 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="406" y="23" key="#ekran5/0.0.1366.768@0.0.1366.768" timestamp="1583496962307" />
-    <state width="1345" height="143" key="GridCell.Tab.0.bottom" timestamp="1584291178166">
+    <state x="402" y="11" key="#lockPage" timestamp="1584887292509">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
-    <state width="1345" height="143" key="GridCell.Tab.0.center" timestamp="1584291178166">
+    <state x="402" y="11" key="#lockPage/0.0.1366.768@0.0.1366.768" timestamp="1584887292509" />
+    <state width="1345" height="143" key="GridCell.Tab.0.bottom" timestamp="1584890232247">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
-    <state width="1345" height="143" key="GridCell.Tab.0.left" timestamp="1584291178166">
+    <state width="1345" height="143" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584890232247" />
+    <state width="1345" height="143" key="GridCell.Tab.0.center" timestamp="1584890232247">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
-    <state width="1345" height="143" key="GridCell.Tab.0.right" timestamp="1584291178166">
+    <state width="1345" height="143" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1584890232247" />
+    <state width="1345" height="143" key="GridCell.Tab.0.left" timestamp="1584890232247">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="143" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584291178166" />
+    <state width="1345" height="143" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1584890232247" />
+    <state width="1345" height="143" key="GridCell.Tab.0.right" timestamp="1584890232247">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1345" height="143" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1584890232247" />
     <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1584290018143">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -241,10 +250,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="27" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1583396940739" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584189375022">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584879911802">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1584189375022" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1584879911802" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

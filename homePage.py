@@ -1,18 +1,23 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter import *
-from tkinter.messagebox import showinfo
 def homePos():
     print("all positions going to zero")
 def resetButton():
-    winColor="brown"
-    bottomColor="yellow"
+    winColor="white"
+    bottomColor="white"
     yesColor="green"
     noColor="green"
     win = tk.Toplevel(background=winColor)
-    win.wm_title("Window")
-    win.wm_attributes('-fullscreen', 'true')
-    #win.overrideredirect(True)
+    win.wm_title("Home Position")
+
+    w = 475
+    h = 225
+    ws = 1024
+    hs = 600
+    x = (ws / 2) - (w / 2)
+    y = (hs / 2) - (h / 2)
+    win.geometry('%dx%d+%d+%d' % (w, h, x, y))
+    win.overrideredirect(True)
     win.wm_attributes('-topmost', 'true')
 
     s = ttk.Style()
@@ -24,9 +29,9 @@ def resetButton():
         win.destroy()
 
     headLabel = tk.Label(winFrame, text="Reset Positions", bg=winColor)
-    headLabel.config(font=("Courier", 12))
+    headLabel.config(font=("Courier", 14))
     textLabel = tk.Label(winFrame, text="Are you sure?",bg=winColor)
-    textLabel.config(font=("Courier", 9))
+    textLabel.config(font=("Courier",11))
 
     yesLabel = tk.Label(winFrame, bg=bottomColor)
     yesLabel.grid(row=2, column=0, sticky='ewns', columnspan=1)
@@ -67,13 +72,13 @@ def resetButton():
         noLabel.configure(bg=bottomColor)
         b_no.configure(bg=bottomColor, activebackground=bottomColor)
         print("yesButtonRelease")
-        yesButton()
-    a =[b_no,b_yes]
-    a[0].bind("<ButtonPress>", noClick)
-    a[0].bind("<ButtonRelease>", noRelease)
+        win.destroy()
+
+    b_no.bind("<ButtonPress>", noClick)
+    b_no.bind("<ButtonRelease>", noRelease)
     '''////////////////////////////////////////////////////////////////'''
 
-    winFrame.grid(column=0, row=0, sticky=(N, S, E, W))
+    winFrame.grid(column=0, row=0, sticky="nsew")
     headLabel.grid(row=0, column=2)
     textLabel.grid(row=1, column=2)
     b_yes.grid(row=2, column=0)
@@ -81,33 +86,18 @@ def resetButton():
 
     win.columnconfigure(0, weight=1)
     win.rowconfigure(0, weight=1)
-    winFrame.columnconfigure(0, weight=4)
-    winFrame.columnconfigure(1, weight=1)
-    winFrame.columnconfigure(2, weight=1)
-    winFrame.columnconfigure(3, weight=1)
-    winFrame.columnconfigure(4, weight=4)
+    winFrame.columnconfigure(0, weight=2)
+    winFrame.columnconfigure(1, weight=0)
+    winFrame.columnconfigure(2, weight=2)
+    winFrame.columnconfigure(3, weight=0)
+    winFrame.columnconfigure(4, weight=2)
     winFrame.rowconfigure(0, weight=2)
     winFrame.rowconfigure(1, weight=2)
     winFrame.rowconfigure(2, weight=2)
 
-def popup_showinfo():
-    showinfo("Window", "Hello World!")
+    #root.config(cursor='none')
 
-class Application(ttk.Frame):
-
-    def __init__(self, master):
-        ttk.Frame.__init__(self, master)
-        self.pack()
-
-        self.button_bonus = ttk.Button(self, text="Bonuses", command=resetButton)
-        self.button_bonus.pack()
-
-        self.button_showinfo = ttk.Button(self, text="Show Info", command=popup_showinfo)
-        self.button_showinfo.pack()
-def exit(event):
-    root.destroy()
 root = tk.Tk()
-root.geometry("500x500")
 
 
 check = tk.PhotoImage(file=r"check-button.png")
@@ -115,8 +105,7 @@ check = check.subsample(1, 1)
 
 delete = tk.PhotoImage(file=r"delete-button.png")
 delete = delete.subsample(1, 1)
-b1 = Button(root,text="animal",command=resetButton)
-b1.pack()
-root.bind("<Escape>", exit)
 
+home = tk.Button(root, text="page", command=resetButton)
+home.pack()
 root.mainloop()

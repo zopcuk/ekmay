@@ -1,5 +1,4 @@
 from time import sleep
-from threading import Thread
 from tkinter import ttk
 import tkinter as tk
 import RPi.GPIO as GPIO
@@ -23,6 +22,119 @@ pin_list = [motor1_ileri_pin1,motor1_ileri_pin2,motor1_geri_pin1,motor1_geri_pin
 for i in pin_list:
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, 0)
+'''/////////////////////////////Lock Page//////////////////////////////'''
+def lockButton():
+    winColor="green"
+    win = tk.Toplevel(background=winColor)
+    win.wm_title("Password")
+    win.wm_attributes('-fullscreen', 'true')
+    win.wm_attributes('-topmost', 'true')
+
+    s = ttk.Style()
+    s.configure('new.TFrame', background=winColor)
+    winFrame = ttk.Frame(win, style='new.TFrame')
+    winFrame.grid(column=0, row=1, sticky="nsew")
+
+    def dele():
+        e.delete(len(e.get()) - 1, tk.END)
+
+    def passOk():
+        if len(e.get()) == 4:
+            if parola == e.get():
+                print("parola doğru")
+                win.destroy()
+            else:
+                print("parola yanlış")
+                e.delete(0, tk.END)
+        else:
+            e.delete(0, tk.END)
+
+    def limitSizeDay(*args):
+        value = password.get()
+        if len(value) > 3: password.set(value[:4])
+
+    labelColor = "gray"
+    parola = "1922"
+    password = tk.StringVar()  # Password variable
+    password.trace('w', limitSizeDay)
+    entryLabel = tk.Label(win, bg=labelColor)
+    entryLabel.grid(row=0, column=0, sticky='ewns', columnspan=1)
+    e = tk.Entry(entryLabel, textvariable=password, show='', justify='center', width=20, font="Helvetica 44 bold",
+                 bg=labelColor, foreground="black", highlightthickness=0, border=0)
+    e.grid(column=0, row=0, sticky="nsew")
+
+    buttoncolor="green"
+    b1 = tk.Button(winFrame, text="1", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "1"))
+    b1.grid(column=0, row=0)
+
+    b2 = tk.Button(winFrame, text="2",bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "2"))
+    b2.grid(column=1, row=0)
+
+    b3 = tk.Button(winFrame, text="3", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "3"))
+    b3.grid(column=2, row=0)
+
+    b4 = tk.Button(winFrame, text="4", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "4"))
+    b4.grid(column=0, row=1)
+
+    b5 = tk.Button(winFrame, text="5", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "5"))
+    b5.grid(column=1, row=1)
+
+    b6 = tk.Button(winFrame, text="6", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "6"))
+    b6.grid(column=2, row=1)
+
+    b7 = tk.Button(winFrame, text="7", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "7"))
+    b7.grid(column=0, row=2)
+
+    b8 = tk.Button(winFrame, text="8", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "8"))
+    b8.grid(column=1, row=2)
+
+    b9 = tk.Button(winFrame, text="9", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "9"))
+    b9.grid(column=2, row=2)
+
+    bok = tk.Button(winFrame, text="OK", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                   font="Helvetica 44 bold", command=passOk)
+    bok.grid(column=0, row=3)
+
+    b0 = tk.Button(winFrame, text="0", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                      font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "0"))
+    b0.grid(column=1, row=3)
+
+    bdel = tk.Button(winFrame, text="DEL", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
+                      font="Helvetica 44 bold", command=dele)
+    bdel.grid(column=2, row=3)
+
+    '''area1 = tk.Label(winFrame, bg=bottomColor)
+    area1.grid(row=2, column=1, sticky='ewns', columnspan=1)
+    area2 = tk.Label(winFrame, bg=bottomColor)
+    area2.grid(row=2, column=2, sticky='ewns', columnspan=1)
+    area3 = tk.Label(winFrame, bg=bottomColor)
+    area3.grid(row=2, column=3, sticky='ewns', columnspan=1)'''
+
+    win.columnconfigure(0, weight=1)
+    win.rowconfigure(0, weight=1)
+    win.rowconfigure(1, weight=3)
+    entryLabel.columnconfigure(0, weight=1)
+    entryLabel.rowconfigure(0, weight=1)
+    winFrame.columnconfigure(0, weight=2)
+    winFrame.columnconfigure(1, weight=2)
+    winFrame.columnconfigure(2, weight=2)
+    winFrame.rowconfigure(0, weight=2)
+    winFrame.rowconfigure(1, weight=2)
+    winFrame.rowconfigure(2, weight=2)
+    winFrame.rowconfigure(3, weight=2)
+
+    # root.config(cursor='none')
+
+
 '''/////////////////////////////Home Position Page//////////////////////////////'''
 def exit(event):
     root.destroy()
@@ -240,10 +352,6 @@ def motor1Ileri(event):
     motor1_ileri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor1_ileri_pin1, 1)
     GPIO.output(motor1_ileri_pin2, 1)
-    while hold_on:
-        print("motor 1 ileri")
-        sleep(0.01)
-
 def motor1Geri(event):
     global hold_on
     hold_on = True
@@ -251,9 +359,6 @@ def motor1Geri(event):
     motor1_geri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor1_geri_pin1, 1)
     GPIO.output(motor1_geri_pin2, 1)
-    while hold_on:
-       print("motor 1 geri")
-       sleep(0.01)
 def motor1Stop(event):
     global hold_on
     hold_on = False
@@ -267,15 +372,9 @@ def motor1Stop(event):
     GPIO.output(motor1_geri_pin1, 0)
     GPIO.output(motor1_geri_pin2, 0)
     print("motor 1 stop")
-motor1_ileri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor1Ileri, args=(event,)).start()
-)
+motor1_ileri.bind("<ButtonPress>", motor1Ileri)
 motor1_ileri.bind("<ButtonRelease>", motor1Stop)
-motor1_geri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor1Geri, args=(event,)).start()
-)
+motor1_geri.bind("<ButtonPress>", motor1Geri)
 motor1_geri.bind("<ButtonRelease>", motor1Stop)
 '''/////////////////// MOTOR 2 ////////////////////'''
 motor2_ileri = tk.Button(content, image = arrow_up, bg=col1Color, border=0, highlightthickness=0, activebackground=col1Color)
@@ -286,19 +385,12 @@ def motor2Ileri(event):
     col1label1.configure(bg=color1)
     motor2_ileri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor2_ileri_pin, 1)
-    while hold_on:
-        print("motor 2 ileri")
-        sleep(0.01)
-
 def motor2Geri(event):
     global hold_on
     hold_on = True
     col1label3.configure(bg=color1)
     motor2_geri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor2_geri_pin, 1)
-    while hold_on:
-       print("motor 2 geri")
-       sleep(0.01)
 def motor2Stop(event):
     global hold_on
     hold_on = False
@@ -309,15 +401,9 @@ def motor2Stop(event):
     GPIO.output(motor2_ileri_pin, 0)
     GPIO.output(motor2_geri_pin, 0)
     print("motor 2 stop")
-motor2_ileri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor2Ileri, args=(event,)).start()
-)
+motor2_ileri.bind("<ButtonPress>", motor2Ileri)
 motor2_ileri.bind("<ButtonRelease>", motor2Stop)
-motor2_geri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor2Geri, args=(event,)).start()
-)
+motor2_geri.bind("<ButtonPress>", motor2Geri)
 motor2_geri.bind("<ButtonRelease>", motor2Stop)
 '''/////////////////// MOTOR 3 ////////////////////'''
 motor3_ileri = tk.Button(content, image = arrow_up, bg=col3Color, border=0, highlightthickness=0, activebackground=col3Color)
@@ -328,19 +414,12 @@ def motor3Ileri(event):
     col3label1.configure(bg=color1)
     motor3_ileri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor3_ileri_pin, 1)
-    while hold_on:
-        print("motor 3 ileri")
-        sleep(0.01)
-
 def motor3Geri(event):
     global hold_on
     hold_on = True
     col3label3.configure(bg=color1)
     motor3_geri.configure(bg=color1, activebackground=color1)
     GPIO.output(motor3_geri_pin, 1)
-    while hold_on:
-       print("motor 3 geri")
-       sleep(0.01)
 def motor3Stop(event):
     global hold_on
     hold_on = False
@@ -351,15 +430,9 @@ def motor3Stop(event):
     GPIO.output(motor3_ileri_pin, 0)
     GPIO.output(motor3_geri_pin, 0)
     print("motor 3 stop")
-motor3_ileri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor3Ileri, args=(event,)).start()
-)
+motor3_ileri.bind("<ButtonPress>", motor3Ileri)
 motor3_ileri.bind("<ButtonRelease>", motor3Stop)
-motor3_geri.bind(
-    "<ButtonPress>",
-    lambda event: Thread(target=motor3Geri, args=(event,)).start()
-)
+motor3_geri.bind("<ButtonPress>", motor3Geri)
 motor3_geri.bind("<ButtonRelease>", motor3Stop)
 '''///////////////////////PWM BUTTONS///////////////////////////'''
 pwm_up = tk.Button(content, image = pwm_add, bg=col4Color, border=0, highlightthickness=0, activebackground=col4Color)
@@ -423,6 +496,7 @@ def lockButtonRelease(event):
     lock_button.configure(bg=col2Color, activebackground=col2Color)
     print("lockButtonRelease")
     print("lock screen active")
+    lockButton()
 lock_button.bind("<ButtonPress>", lockButtonClick)
 lock_button.bind("<ButtonRelease>", lockButtonRelease)
 '''/////////////////////////CONFIGURATIONS///////////////////////////////'''

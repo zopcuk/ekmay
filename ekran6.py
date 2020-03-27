@@ -175,10 +175,10 @@ col4label3.grid(row=3, column=4, sticky='ewns', columnspan=1)
 col4label4 = tk.Label(content, bg=col4Color)
 col4label4.grid(row=4, column=4, sticky='ewns', columnspan=1)
 '''///////////////////// ICONS //////////////////////'''
-pwm_add = tk.PhotoImage(file=r"700256.png")
+pwm_add = tk.PhotoImage(file=r"add.png")
 pwm_add = pwm_add.subsample(5, 5)
 
-pwm_minus = tk.PhotoImage(file=r"700294.png")
+pwm_minus = tk.PhotoImage(file=r"minus.png")
 pwm_minus = pwm_minus.subsample(5, 5)
 
 arrow_up = tk.PhotoImage(file=r"up.png")
@@ -187,8 +187,8 @@ arrow_up = arrow_up.subsample(5, 5)
 arrow_down = tk.PhotoImage(file=r"down.png")
 arrow_down = arrow_down.subsample(5, 5)
 
-motor1_icon = tk.PhotoImage(file=r"icons8-airbag-80.png")
-motor1_icon = motor1_icon.subsample(1, 1)
+motor1_icon = tk.PhotoImage(file=r"motor1.png")
+motor1_icon = motor1_icon.subsample(4, 4)
 
 reset_icon = tk.PhotoImage(file=r"reload-arrow.png")
 reset_icon = reset_icon.subsample(5, 5)

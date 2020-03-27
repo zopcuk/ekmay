@@ -1,6 +1,10 @@
 import tkinter as tk
 from tkinter import ttk
+from time import sleep
+from threading import Thread
+
 def homePos():
+    sleep(5)
     print("all positions going to zero")
 def resetButton():
     winColor="white"
@@ -9,7 +13,7 @@ def resetButton():
     noColor="green"
     win = tk.Toplevel(background=winColor)
     win.wm_title("Home Position")
-
+    win.grab_set()
     w = 475
     h = 225
     ws = 1024
@@ -19,13 +23,15 @@ def resetButton():
     win.geometry('%dx%d+%d+%d' % (w, h, x, y))
     win.overrideredirect(True)
     win.wm_attributes('-topmost', 'true')
-
     s = ttk.Style()
-    s.configure('new.TFrame', background=winColor,highlightcolor="green",highlightthickness=3,bd=3)
+    s.configure('new.TFrame', background=winColor, highlightcolor="green", highlightthickness=3, bd=3)
     winFrame = ttk.Frame(win, style='new.TFrame')
 
+
     def yesButton():
+        '''Thread(target=homePos).start()'''
         homePos()
+        root.update()
         win.destroy()
 
     headLabel = tk.Label(winFrame, text="Reset Positions", bg=winColor)
@@ -99,13 +105,16 @@ def resetButton():
 
 root = tk.Tk()
 
-
 check = tk.PhotoImage(file=r"check-button.png")
-check = check.subsample(1, 1)
+check = check.subsample(7, 7)
 
 delete = tk.PhotoImage(file=r"delete-button.png")
-delete = delete.subsample(1, 1)
+delete = delete.subsample(7, 7)
 
 home = tk.Button(root, text="page", command=resetButton)
 home.pack()
+def pr():
+    print("testtttt")
+prin = tk.Button(root, text="test", command=pr)
+prin.pack()
 root.mainloop()

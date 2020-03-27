@@ -3,12 +3,11 @@ from tkinter import ttk
 from tkinter import *
 from tkinter.messagebox import showinfo
 def lockButton():
-    winColor="green"
+    winColor="#106181"
     win = tk.Toplevel(background=winColor)
     win.wm_title("Password")
     win.wm_attributes('-fullscreen', 'true')
     win.wm_attributes('-topmost', 'true')
-
     s = ttk.Style()
     s.configure('new.TFrame', background=winColor)
     winFrame = ttk.Frame(win, style='new.TFrame')
@@ -21,6 +20,7 @@ def lockButton():
         if len(e.get()) == 4:
             if parola == e.get():
                 print("parola doğru")
+                root.wm_attributes('-topmost', 'true')
                 win.destroy()
             else:
                 print("parola yanlış")
@@ -32,7 +32,7 @@ def lockButton():
         value = password.get()
         if len(value) > 3: password.set(value[:4])
 
-    labelColor = "gray"
+    labelColor = "#51719c"
     parola = "1922"
     password = tk.StringVar()  # Password variable
     password.trace('w', limitSizeDay)
@@ -42,7 +42,7 @@ def lockButton():
                  bg=labelColor, foreground="black", highlightthickness=0, border=0)
     e.grid(column=0, row=0, sticky="nsew")
 
-    buttoncolor="green"
+    buttoncolor=winColor
     b1 = tk.Button(winFrame, text="1", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
                    font="Helvetica 44 bold", command=lambda: e.insert(END, "1"))
     b1.grid(column=0, row=0)
@@ -110,7 +110,6 @@ def lockButton():
     winFrame.rowconfigure(1, weight=2)
     winFrame.rowconfigure(2, weight=2)
     winFrame.rowconfigure(3, weight=2)
-
     # root.config(cursor='none')
 def popup_showinfo():
     showinfo("Window", "Hello World!")
@@ -121,6 +120,7 @@ def exit(event):
 root = tk.Tk()
 root.geometry("500x500")
 
+lockButton()
 
 check = tk.PhotoImage(file=r"check-button.png")
 check = check.subsample(1, 1)

@@ -9,22 +9,20 @@ pwm35 = GPIO.PWM(35, 60)
 pwm35.start(0)
 dutyCycle = 0
 
-motor1_ileri_pin1 = 40
-motor1_ileri_pin2 = 10
-motor1_geri_pin1 = 38
-motor1_geri_pin2 = 8
+motor1_ileri_pin = 40
+motor1_geri_pin = 38
 motor2_ileri_pin = 3
 motor2_geri_pin = 5
 motor3_ileri_pin = 7
 motor3_geri_pin = 11
 
-pin_list = [motor1_ileri_pin1,motor1_ileri_pin2,motor1_geri_pin1,motor1_geri_pin2,motor2_ileri_pin,motor2_geri_pin,motor3_ileri_pin,motor3_geri_pin]
+pin_list = [motor1_ileri_pin,motor1_geri_pin,motor2_ileri_pin,motor2_geri_pin,motor3_ileri_pin,motor3_geri_pin]
 for i in pin_list:
     GPIO.setup(i, GPIO.OUT)
     GPIO.output(i, 0)
 '''/////////////////////////////Lock Page//////////////////////////////'''
 def lockButton():
-    winColor="green"
+    winColor="#106181"
     win = tk.Toplevel(background=winColor)
     win.wm_title("Password")
     win.wm_attributes('-fullscreen', 'true')
@@ -42,6 +40,8 @@ def lockButton():
         if len(e.get()) == 4:
             if parola == e.get():
                 print("parola doğru")
+                root.wm_attributes('-fullscreen', 'true')
+                root.wm_attributes('-topmost', 'true')
                 win.destroy()
             else:
                 print("parola yanlış")
@@ -53,17 +53,17 @@ def lockButton():
         value = password.get()
         if len(value) > 3: password.set(value[:4])
 
-    labelColor = "gray"
+    labelColor = "#51719c"
     parola = "1922"
     password = tk.StringVar()  # Password variable
     password.trace('w', limitSizeDay)
     entryLabel = tk.Label(win, bg=labelColor)
     entryLabel.grid(row=0, column=0, sticky='ewns', columnspan=1)
-    e = tk.Entry(entryLabel, textvariable=password, show='', justify='center', width=20, font="Helvetica 44 bold",
+    e = tk.Entry(entryLabel, textvariable=password, show='*', justify='center', width=20, font="Helvetica 44 bold",
                  bg=labelColor, foreground="black", highlightthickness=0, border=0)
     e.grid(column=0, row=0, sticky="nsew")
 
-    buttoncolor="green"
+    buttoncolor=winColor
     b1 = tk.Button(winFrame, text="1", bg=buttoncolor, width=7, border=0, highlightthickness=0, activebackground=buttoncolor,
                    font="Helvetica 44 bold", command=lambda: e.insert(tk.END, "1"))
     b1.grid(column=0, row=0)
@@ -238,8 +238,7 @@ def resetButton():
 '''///////////////////////////tkinter config//////////////////////////////'''
 root = tk.Tk()
 root.title("EKMAY GUI")
-root.wm_attributes('-fullscreen','true')
-root.wm_attributes('-topmost','true')
+
 color1 = '#f09609'
 s = ttk.Style()
 s.configure('new.TFrame', background=color1)
@@ -350,15 +349,13 @@ def motor1Ileri(event):
     #motor1_ileri.configure(image=arrow_down)
     col0label1.configure(bg=color1)
     motor1_ileri.configure(bg=color1, activebackground=color1)
-    GPIO.output(motor1_ileri_pin1, 1)
-    GPIO.output(motor1_ileri_pin2, 1)
+    GPIO.output(motor1_ileri_pin, 1)
 def motor1Geri(event):
     global hold_on
     hold_on = True
     col0label3.configure(bg=color1)
     motor1_geri.configure(bg=color1, activebackground=color1)
-    GPIO.output(motor1_geri_pin1, 1)
-    GPIO.output(motor1_geri_pin2, 1)
+    GPIO.output(motor1_geri_pin, 1)
 def motor1Stop(event):
     global hold_on
     hold_on = False
@@ -367,10 +364,8 @@ def motor1Stop(event):
     col0label1.configure(bg=col0Color)
     motor1_ileri.configure(bg=col0Color, activebackground=col0Color)
     motor1_geri.configure(bg=col0Color, activebackground=col0Color)
-    GPIO.output(motor1_ileri_pin1, 0)
-    GPIO.output(motor1_ileri_pin2, 0)
-    GPIO.output(motor1_geri_pin1, 0)
-    GPIO.output(motor1_geri_pin2, 0)
+    GPIO.output(motor1_ileri_pin, 0)
+    GPIO.output(motor1_geri_pin, 0)
     print("motor 1 stop")
 motor1_ileri.bind("<ButtonPress>", motor1Ileri)
 motor1_ileri.bind("<ButtonRelease>", motor1Stop)
@@ -532,5 +527,5 @@ content.rowconfigure(4, weight=2)
 
 #root.config(cursor='none')
 root.bind("<Escape>", exit)
-
+lockButton()
 root.mainloop()

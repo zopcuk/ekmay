@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d85b39-3557-4ffb-b441-bbb701a511f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ekran10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ekran9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ekran11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ekran12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ekran13.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lockPage2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ba8a6b5881fec111f49096ee7a7b941065103508.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekmay.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran10.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran10.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ekran6.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran8.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/homePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran9.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lockPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/lockPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tst.py" beforeDir="false" afterPath="$PROJECT_DIR$/tst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +42,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.homePage">
-    <configuration name="ekran10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ekran12">
+    <configuration name="ekran12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,7 +58,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran10.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ekran13" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="eymak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran13.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,48 +109,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ekran9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="eymak" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran9.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="homePage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="eymak" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homePage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="lockPage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +130,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tst (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lockPage2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="eymak" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lockPage2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -171,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.homePage" />
+        <item itemvalue="Python.ekran12" />
+        <item itemvalue="Python.tst" />
         <item itemvalue="Python.lockPage" />
-        <item itemvalue="Python.ekran10" />
-        <item itemvalue="Python.tst (1)" />
-        <item itemvalue="Python.ekran9" />
+        <item itemvalue="Python.lockPage2" />
+        <item itemvalue="Python.ekran13" />
       </list>
     </recent_temporary>
   </component>
@@ -217,46 +220,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="11" key="#lockPage/0.0.1366.768@0.0.1366.768" timestamp="1584887292509" />
-    <state width="1345" height="121" key="GridCell.Tab.0.bottom" timestamp="1585153854522">
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom" timestamp="1586132576432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="121" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585153854522" />
-    <state width="1345" height="121" key="GridCell.Tab.0.center" timestamp="1585153854522">
+    <state width="1345" height="97" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
+    <state width="1345" height="97" key="GridCell.Tab.0.center" timestamp="1586132576432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="121" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585153854522" />
-    <state width="1345" height="121" key="GridCell.Tab.0.left" timestamp="1585153854522">
+    <state width="1345" height="97" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
+    <state width="1345" height="97" key="GridCell.Tab.0.left" timestamp="1586132576432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="121" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585153854522" />
-    <state width="1345" height="121" key="GridCell.Tab.0.right" timestamp="1585153854522">
+    <state width="1345" height="97" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
+    <state width="1345" height="97" key="GridCell.Tab.0.right" timestamp="1586132576432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="121" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585153854522" />
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1584290018143">
+    <state width="1345" height="97" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
+    <state width="1345" height="117" key="GridCell.Tab.1.bottom" timestamp="1586062982714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
-    <state width="1345" height="238" key="GridCell.Tab.1.center" timestamp="1584290018143">
+    <state width="1345" height="117" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
+    <state width="1345" height="117" key="GridCell.Tab.1.center" timestamp="1586062982714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
-    <state width="1345" height="238" key="GridCell.Tab.1.left" timestamp="1584290018143">
+    <state width="1345" height="117" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
+    <state width="1345" height="117" key="GridCell.Tab.1.left" timestamp="1586062982714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
-    <state width="1345" height="238" key="GridCell.Tab.1.right" timestamp="1584290018143">
+    <state width="1345" height="117" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
+    <state width="1345" height="117" key="GridCell.Tab.1.right" timestamp="1586062982714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1584290018143" />
+    <state width="1345" height="117" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
     <state x="184" y="27" key="SettingsEditor" timestamp="1583396940739">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="27" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1583396940739" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584879911802">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586116781263">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1584879911802" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1586116781263" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

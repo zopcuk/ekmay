@@ -3,6 +3,7 @@ from tkinter import ttk
 import tkinter as tk
 import RPi.GPIO as GPIO
 import sys
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(35, GPIO.OUT)
@@ -347,7 +348,7 @@ reset_icon = reset_icon.subsample(5, 5)
 check = tk.PhotoImage(file=r"check-button.png")
 check = check.subsample(7, 7)
 
-delete = tk.PhotoImage(file=r"delete-button.png")
+delete = tk.PhotoImage(file=r"cancel-button.png")
 delete = delete.subsample(7, 7)
 
 lock_icon = tk.PhotoImage(file=r"lock-icon.png")

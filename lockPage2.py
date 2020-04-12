@@ -17,14 +17,13 @@ def root_tk():
         if len(value3) > 3: password3.set(value3[:4])
 
     root = tk.Toplevel()
-    root.geometry("500x500")
     root.wm_attributes('-fullscreen', 'true')
     root.wm_attributes('-topmost', 'true')
     root.columnconfigure(0, weight=1)
     root.rowconfigure(0, weight=1)
     '''///////////////////////////////////////'''
-    rootColor = "#51719c"
-    buttoncolor = "#106181"
+    rootColor = "#189ad3"
+    buttoncolor = "#107dac"
     cancelColor = "#f09609" #"#ff5722"
     activeColor = "#f09609"
     font = "Helvetica 36 bold"
@@ -40,6 +39,7 @@ def root_tk():
     password3 = tk.StringVar()  # Password variable
     password3.trace('w', limitSizeDay)
 
+    config.read('config.ini')
     parola = config.get('section_a', 'parola')
     admin_parola = config.get('section_a', 'admin_parola')
 
@@ -70,7 +70,8 @@ def root_tk():
     passwordlabel1.rowconfigure(0, weight=1)
     textLabel1 = tk.Label(passwordlabel1, text="    Enter Password :", bg=activeColor, font=textFont)
     textLabel1.grid(column=0, row=0, sticky="e")
-    entry1 = tk.Entry(passwordlabel1, textvariable=password1, width=15, show="*", font=entryFont, border=0,disabledbackground=buttoncolor)
+    entry1 = tk.Entry(passwordlabel1, textvariable=password1, highlightthickness=0, width=15, show="*", font=entryFont,
+                      border=0, disabledbackground=buttoncolor)
     entry1.grid(column=1, row=0, sticky="w")
     '''///////////////////////////////////////'''
     passwordlabel2 = tk.Label(content, bg=rootColor)
@@ -80,7 +81,8 @@ def root_tk():
     passwordlabel2.rowconfigure(0, weight=1)
     textLabel2 = tk.Label(passwordlabel2, text="      New Password :", bg=rootColor,font=textFont)
     textLabel2.grid(column=0, row=0, sticky="e")
-    entry2 = tk.Entry(passwordlabel2, textvariable=password2, state=tk.DISABLED, width=15, show="*", font=entryFont, border=0,disabledbackground=buttoncolor)
+    entry2 = tk.Entry(passwordlabel2, textvariable=password2, highlightthickness=0, state=tk.DISABLED, width=15,
+                      show="*", font=entryFont, border=0, disabledbackground=buttoncolor)
     entry2.grid(column=1, row=0, sticky="w")
     '''/////////////////////////////////////////'''
     passwordlabel3 = tk.Label(content, bg=rootColor)
@@ -90,7 +92,8 @@ def root_tk():
     passwordlabel3.rowconfigure(0, weight=1)
     textLabel3 = tk.Label(passwordlabel3, text="Confirm Password :", bg=rootColor, font=textFont)
     textLabel3.grid(column=0, row=0, sticky="e")
-    entry3 = tk.Entry(passwordlabel3, textvariable=password3, state=tk.DISABLED, width=15, show="*", font=entryFont, border=0,disabledbackground=buttoncolor)
+    entry3 = tk.Entry(passwordlabel3, textvariable=password3, highlightthickness=0, state=tk.DISABLED, width=15,
+                      show="*", font=entryFont, border=0,disabledbackground=buttoncolor)
     entry3.grid(column=1, row=0, sticky="w")
     '''///////////////////////////////////////////////'''
     numbersLabel = tk.Label(content, bg=buttoncolor)
@@ -166,7 +169,7 @@ def root_tk():
         else:
             entry2.delete(0, tk.END)
         if len(entry2.get())==4 and len(entry3.get())==4 and entry3.get()==entry2.get():
-            headlabel.configure(text="PASSWORD CHANCED",bg="#639a67")
+            headlabel.configure(text="PASSWORD CHANGED",bg="#639a67")
             root.update()
             changePassword()
         elif len(entry2.get())==4 and entry3.get()!=entry2.get() and len(entry3.get())>0:
@@ -225,9 +228,9 @@ def root_tk():
     cancelLabel.grid(column=0, row=5, sticky="ewsn")
     cancelLabel.columnconfigure(0, weight=1)
     cancelLabel.rowconfigure(0, weight=1)
-    cancelButton = tk.Button(cancelLabel,text="CANCEL",width=20,font="Helvetica 20 bold",bg=cancelColor,border=0,
-                             highlightthickness=0,activebackground=cancelColor,command=cancel)
-    cancelButton.grid(column=0, row=0,sticky="nsew")
+    cancelButton = tk.Button(cancelLabel, text="CANCEL", width=20, font="Helvetica 20 bold", bg=cancelColor, border=0,
+                             highlightthickness=0, activebackground=cancelColor, command=cancel)
+    cancelButton.grid(column=0, row=0, sticky="nsew")
 
     root.bind("<Escape>", exit)
     root.mainloop()

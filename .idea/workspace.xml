@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d85b39-3557-4ffb-b441-bbb701a511f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ekran11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ekran12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ekran13.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lockPage2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infoPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infoPage2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran10.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran6.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ekran9.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lockPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/lockPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran12.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran12.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ekran13.py" beforeDir="false" afterPath="$PROJECT_DIR$/ekran13.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/info_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lifewalk.png" beforeDir="false" afterPath="$PROJECT_DIR$/lifewalk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lock-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/lock-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lockPage2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lockPage2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tst.py" beforeDir="false" afterPath="$PROJECT_DIR$/tst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +32,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/infoPage2.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/infoPage.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ekran13.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1YhZIhlb8k5rKOYxaHRka7eos05" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,8 +50,8 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.ekran12">
-    <configuration name="ekran12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.gif">
+    <configuration name="ekran1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -58,7 +63,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran12.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ekran1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -109,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lockPage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="gif" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +122,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lockPage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/gif.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lockPage2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="infoPage2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="eymak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,7 +147,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lockPage2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/infoPage2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ekran12" />
-        <item itemvalue="Python.tst" />
-        <item itemvalue="Python.lockPage" />
-        <item itemvalue="Python.lockPage2" />
+        <item itemvalue="Python.gif" />
         <item itemvalue="Python.ekran13" />
+        <item itemvalue="Python.infoPage2" />
+        <item itemvalue="Python.tst" />
+        <item itemvalue="Python.ekran1" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +201,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="43" key="#Inspections" timestamp="1586539553640">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="43" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1586539553640" />
     <state x="402" y="11" key="#deneme3" timestamp="1584887162739">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -204,6 +213,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="15" key="#ekran1/0.0.1366.768@0.0.1366.768" timestamp="1583424629429" />
+    <state x="402" y="11" key="#ekran12" timestamp="1586281606406">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="402" y="11" key="#ekran12/0.0.1366.768@0.0.1366.768" timestamp="1586281606406" />
     <state x="402" y="11" key="#ekran4" timestamp="1583496966740">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -220,38 +233,38 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="11" key="#lockPage/0.0.1366.768@0.0.1366.768" timestamp="1584887292509" />
-    <state width="1345" height="97" key="GridCell.Tab.0.bottom" timestamp="1586132576432">
+    <state width="1345" height="130" key="GridCell.Tab.0.bottom" timestamp="1586643088810">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="97" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
-    <state width="1345" height="97" key="GridCell.Tab.0.center" timestamp="1586132576432">
+    <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586643088810" />
+    <state width="1345" height="130" key="GridCell.Tab.0.center" timestamp="1586643088810">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="97" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
-    <state width="1345" height="97" key="GridCell.Tab.0.left" timestamp="1586132576432">
+    <state width="1345" height="130" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586643088810" />
+    <state width="1345" height="130" key="GridCell.Tab.0.left" timestamp="1586643088810">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="97" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
-    <state width="1345" height="97" key="GridCell.Tab.0.right" timestamp="1586132576432">
+    <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586643088810" />
+    <state width="1345" height="130" key="GridCell.Tab.0.right" timestamp="1586643088810">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="97" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586132576432" />
-    <state width="1345" height="117" key="GridCell.Tab.1.bottom" timestamp="1586062982714">
+    <state width="1345" height="130" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586643088810" />
+    <state width="1345" height="117" key="GridCell.Tab.1.bottom" timestamp="1586416580907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="117" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
-    <state width="1345" height="117" key="GridCell.Tab.1.center" timestamp="1586062982714">
+    <state width="1345" height="117" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586416580907" />
+    <state width="1345" height="117" key="GridCell.Tab.1.center" timestamp="1586416580907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="117" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
-    <state width="1345" height="117" key="GridCell.Tab.1.left" timestamp="1586062982714">
+    <state width="1345" height="117" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586416580907" />
+    <state width="1345" height="117" key="GridCell.Tab.1.left" timestamp="1586416580907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="117" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
-    <state width="1345" height="117" key="GridCell.Tab.1.right" timestamp="1586062982714">
+    <state width="1345" height="117" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586416580907" />
+    <state width="1345" height="117" key="GridCell.Tab.1.right" timestamp="1586416580907">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="117" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586062982714" />
+    <state width="1345" height="117" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586416580907" />
     <state x="184" y="27" key="SettingsEditor" timestamp="1583396940739">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
